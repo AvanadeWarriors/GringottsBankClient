@@ -1,3 +1,19 @@
 .gringotts-gray{
     background-color: #3b3a40;
 }
+img{
+    width: 220px;
+    padding: 0 20px
+}
+.fa-bars{
+    color: #ffffff;
+}
+.fa-bars:hover{
+    color: #f2d949;
+}
+.nav-link{
+    color: #ffffff;
+}
+.nav-link:hover{
+    color: #f2d949;
+}
