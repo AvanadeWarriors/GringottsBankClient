@@ -2,7 +2,7 @@ Número da conta:
 <input type="text" name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
 
 Conta destino:
-<input type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber" >
+<input type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber" (ngModelChange)="getAccount()">
 Nome favorecido:
 <input type="text" disabled name="targetName" id="targetName" value="a">
 Cpf:
