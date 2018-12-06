@@ -1,5 +1,8 @@
+
+import { environment } from './../../../environments/environment';
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 import { Observable } from 'rxjs';
 import { tap, shareReplay, map } from 'rxjs/operators';
@@ -13,9 +16,9 @@ import * as moment from 'moment';
 })
 export class LoginService {
 
-  private apiRoot = 'http://localhost:3000';
-  private URL_API = 'https://api-gringottsbanks.ddns.net';
+
   usuarioLogado = new EventEmitter<boolean>();
+  URL_API = environment.URL_API;
 
 
   constructor(private http: HttpClient) { }
@@ -49,12 +52,12 @@ export class LoginService {
     const userLogin = { cpf, password };
 
     return this.http.post(`${this.URL_API}/customer/auth`, JSON.stringify(userLogin), { headers: headers })
-        .pipe(
-            map(response => {
-                this.setSession(response);
-                this.usuarioLogado.emit(true);
-            })
-        );
+      .pipe(
+        map(response => {
+          this.setSession(response);
+          this.usuarioLogado.emit(true);
+        })
+      );
   }
 
 
@@ -70,7 +73,7 @@ export class LoginService {
   refreshToken() {
     if (moment().isBetween(this.getExpiration().subtract(1, 'days'), this.getExpiration())) {
       return this.http.post(
-        this.apiRoot.concat('refresh-token/'),
+        this.URL_API.concat('refresh-token/'),
         { access_token: this.token }
       ).pipe(
         tap(response => this.setSession(response)),
