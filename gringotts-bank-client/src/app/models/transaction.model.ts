@@ -1,6 +1,7 @@
 export class Transaction {
-    type: string;
+    transactionType: string;
     accountNumber: number;
+    targetAccountNumber: number;
     accountId: string;
     interactedAccountId: string;
     postBalance: string;
