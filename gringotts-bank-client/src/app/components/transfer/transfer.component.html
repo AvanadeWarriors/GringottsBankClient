@@ -1,3 +1,11 @@
-<p>
-  transfer works!
-</p>
+Número da conta:
+<input type="text" name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
+
+Conta destino:
+<input type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber">
+
+Amount:
+<input type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
+
+<button type="text" (click)="createTransaction()">Enviar</button>
+
