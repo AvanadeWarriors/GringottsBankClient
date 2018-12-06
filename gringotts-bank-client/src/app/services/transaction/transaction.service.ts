@@ -21,7 +21,7 @@ export class TransactionService {
   getAccount(transaction: Transaction) {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-    return this.http.get<Account>(this.URL_API + '/account/' + transaction.targetAccountNumber);
+    return this.http.get<any>(this.URL_API + '/account/' + transaction.targetAccountNumber);
   }
 
 }
