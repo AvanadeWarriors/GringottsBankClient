@@ -18,5 +18,11 @@ export class TransactionService {
     return this.http.post(this.URL_API + '/account/transaction', JSON.stringify(transaction), { headers: headers });
   }
 
+  getAccount(transaction: Transaction) {
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    return this.http.get<Account>(this.URL_API + '/account/' + transaction.targetAccountNumber);
+  }
+
 }
 
