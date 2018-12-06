@@ -1,15 +1,36 @@
-Número da conta:
-<input type="text" name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
+<div class="container">
+    <div class="row valign-wrapper">
+        <div class="col s12 m6 offset-m3 valign">
+            <div class="card-panel center">
+                <div class="input-field">
+                    <label for="accountNumber">Número da conta:</label>
+                    <input type="text" name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
+                </div>
+                <div class="input-field">
+                    <label for="targetAccountNumber">Conta destino:</label>  
+                    <input type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber" >
+                </div>
+                <div class="input-field">
+                    <label for="targetName">Nome favorecido:</label>  
+                    <input type="text" disabled name="targetName" id="targetName" value="a">
+                </div>
+                <div class="input-field">
+                    <label for="targetCpf">CPF:</label>          
+                    <input type="text" name="targetCpf" id="targetCpf">
+                </div>
+                <div class="input-field">
+                    <label for="amount">Amount:</label>            
+                    <input type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
+                </div>
+                <button class="btn btn-gringotts waves-effect waves-light" type="text" (click)="createTransaction()">Enviar</button>
+            </div>
+        </div>        
+    </div>            
+</div>
 
-Conta destino:
-<input type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber" >
-Nome favorecido:
-<input type="text" disabled name="targetName" id="targetName" value="a">
-Cpf:
-<input type="text" name="targetCpf" id="targetCpf">
 
-Amount:
-<input type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
 
-<button type="text" (click)="createTransaction()">Enviar</button>
+
+
+
 

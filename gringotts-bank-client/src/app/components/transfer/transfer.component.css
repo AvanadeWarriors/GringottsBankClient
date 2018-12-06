@@ -1,0 +1,24 @@
+.btn-gringotts{
+    background-color: #f2d949;
+    color: #3b3a40;
+}
+input#input_text:focus{
+    border-bottom: 1px solid #f2d949;
+    box-shadow: 0 1px 0 0 #f2d949;
+}
+.input-field label.active{
+    color: #f2d949;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #f2d949;
+    box-shadow: 0 1px 0 0 #f2d949;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #f2d949;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #f2d949;
+}
