@@ -14,6 +14,9 @@ footer a:hover{
     align-content: center;
     padding: 20px;
 }
+.center{
+    margin: 0 auto;
+}
 .standup ul {
     padding-right: 20px;
 }
