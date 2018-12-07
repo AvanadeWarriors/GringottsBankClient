@@ -1,27 +1,19 @@
 <div class="container">
   <div class="row valign-wrapper">
-      <div class="col s12 m6 offset-m3 valign">
-        <div class="card-panel center">
-          <div class="input-field">
-              <i class="fas fa-user-circle prefix"></i>
-              <input #cpf id="input_cpf" type="text" data-length="10">
-              <label for="input_cpf">CPF</label>
-          </div>
-          <div class="input-field">
-              <i class="fas fa-lock prefix"></i>
-              <input  #password id="input_password" type="password" data-length="10">
-              <label for="input_password">Senha</label>
-          </div>
-          <button class="btn btn-gringotts waves-effect waves-light" type="submit" name="action" (click)="login(cpf.value, password.value)">Continuar</button>
+    <div class="col s12 m6 offset-m3 valign">
+      <div class="card-panel center">
+        <div class="input-field">
+          <i class="fas fa-user-circle prefix"></i>
+          <input #cpf id="input_cpf" type="text" data-length="10" [dropSpecialCharacters]="true" mask="000.000.000-00" [(ngModel)]="customer.cpf">
+          <label for="input_cpf">CPF</label>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock prefix"></i>
+          <input #password id="input_password" type="password" data-length="10" [(ngModel)]="customer.password">
+          <label for="input_password">Senha</label>
+        </div>
+        <button class="btn btn-gringotts waves-effect waves-light" type="submit" name="action" (click)="login()">Continuar</button>
       </div>
     </div>
   </div>
 </div>
-                  
-
-
-
-
-
-
-

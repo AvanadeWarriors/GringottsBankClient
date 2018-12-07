@@ -12,11 +12,11 @@
                 </div>
                 <div class="input-field">
                     <label for="targetName">Nome favorecido:</label>  
-                    <input type="text" disabled name="targetName" id="targetName">
+                    <input type="text"  name="targetName" id="targetName"  [(ngModel)]="targetAccount.name">
                 </div>
                 <div class="input-field">
                     <label for="targetCpf">CPF:</label>          
-                    <input type="text" disabled name="targetCpf" id="targetCpf">
+                    <input type="text"  name="targetCpf" id="targetCpf" [(ngModel)]="targetAccount.cpf">
                 </div>
                 <div class="input-field">
                     <label for="amount">Amount:</label>            
@@ -30,4 +30,27 @@
 
 
 
+<!-- <div class="example-container">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Número da conta" [(ngModel)]="transaction.accountNumber" name="accountNumber">
+        </mat-form-field>
 
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Conta destino" [(ngModel)]="transaction.targetAccount" name="targetAccount" (ngModelChange)="getAccount()">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Nome destino" [(ngModel)]="targetAccount.name" name="targetAccountName">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="CPF destino" [(ngModel)]="targetAccount.cpf" name="targetAccountCpf">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Amount" [(ngModel)]="transaction.amount" name="transactionAmount">
+        </mat-form-field>
+
+    </form>
+</div> -->

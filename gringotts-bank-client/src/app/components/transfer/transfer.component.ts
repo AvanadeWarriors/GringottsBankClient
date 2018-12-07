@@ -26,8 +26,8 @@ export class TransferComponent implements OnInit {
 
   getAccount() {
     this.transactionService.getAccount(this.transaction).subscribe(response => {
-      this.targetAccount = response;
-      console.log(response);
+      this.targetAccount = response.accountData;
+      console.log(response.accountData);
     });
   }
 
