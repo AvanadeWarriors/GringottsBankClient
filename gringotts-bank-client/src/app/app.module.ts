@@ -35,7 +35,7 @@ import { SliderComponent } from './components/slider/slider.component';
     StatementComponent,
     CreateAccountComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
