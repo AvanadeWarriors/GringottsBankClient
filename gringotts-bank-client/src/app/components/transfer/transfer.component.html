@@ -4,28 +4,32 @@
             <div class="card-panel center">
                 <div class="input-field">
                     <label for="accountNumber">Número da conta:</label>
-                    <input type="text" name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
+                    <input required type="text" disabled name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
                 </div>
-                <div class="input-field">
-                    <label for="targetAccountNumber">Conta destino:</label>  
-                    <input type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber" (ngModelChange)="getAccount()">
-                </div>
-                <div class="input-field">
-                    <label for="targetName">Nome favorecido:</label>  
-                    <input type="text"  name="targetName" id="targetName"  [(ngModel)]="targetAccount.name">
-                </div>
-                <div class="input-field">
-                    <label for="targetCpf">CPF:</label>          
-                    <input type="text"  name="targetCpf" id="targetCpf" [(ngModel)]="targetAccount.cpf">
-                </div>
-                <div class="input-field">
-                    <label for="amount">Amount:</label>            
-                    <input type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
-                </div>
-                <button class="btn btn-gringotts waves-effect waves-light" type="text" (click)="createTransaction()">Enviar</button>
+                <form #transferForm="ngForm">
+                    <div class="input-field">
+                        <label for="targetAccountNumber">Conta destino:</label>
+                        <input required type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber"
+                            (ngModelChange)="getAccount()">
+                    </div>
+                    <div class="input-field">
+                        <label for="targetName">Nome favorecido:</label>
+                        <input required type="text" name="targetName" id="targetName" [(ngModel)]="targetAccount.name">
+                    </div>
+                    <div class="input-field">
+                        <label for="targetCpf">CPF:</label>
+                        <input required type="text" name="targetCpf" id="targetCpf" [(ngModel)]="targetAccount.cpf">
+                    </div>
+                    <div class="input-field">
+                        <label for="amount">Amount:</label>
+                        <input required type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
+                    </div>
+                    <button class="btn btn-gringotts waves-effect waves-light" type="text" (click)="createTransaction(); transferForm.reset()">Enviar</button>
+                </form>
             </div>
-        </div>        
-    </div>            
+        </div>
+    </div>
+
 </div>
 
 

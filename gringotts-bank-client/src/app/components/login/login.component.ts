@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { LoginService } from './../../services/login/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   customer = new Customer();
 
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router, private toastrService: ToastrService) { }
 
   ngOnInit() {
   }
@@ -36,8 +37,13 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginService.login(this.customer.cpf, this.customer.password).subscribe(
-      sucess => this.router.navigate(['/home']),
-      error => this.error = error
+      sucess => {
+        this.router.navigate(['/home']);
+      },
+      error => {
+        console.log(error.error.message);
+        this.toastrService.error(error.error.message, '');
+      }
     );
   }
 
