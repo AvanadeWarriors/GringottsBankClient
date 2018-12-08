@@ -14,17 +14,26 @@
     <div class="col s6 m6">
       <div class="row mb-5">
         <div class="col s12 m12">
-          <div class="card-panel small-card"></div>
+          <div class="card-panel small-card" (click)="redirectTo('/transfer')">
+            <label>Transferência</label>
+            <mat-icon>arrow_right</mat-icon>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5 pointer" >
+        <div class="col s12 m12" >
+          <div class="card-panel small-card" (click)="redirectTo('/statement')">
+            <label>Extrato</label>
+            <mat-icon>arrow_right</mat-icon>
+          </div>
         </div>
       </div>
       <div class="row mb-5">
         <div class="col s12 m12">
-          <div class="card-panel small-card"></div>
-        </div>
-      </div>
-      <div class="row mb-5">
-        <div class="col s12 m12">
-          <div class="card-panel small-card"></div>
+          <div class="card-panel small-card" (click)="redirectTo('/transfer')">
+            <label>Transferência</label>
+            <mat-icon>arrow_right</mat-icon>
+          </div>
         </div>
       </div>
     </div>

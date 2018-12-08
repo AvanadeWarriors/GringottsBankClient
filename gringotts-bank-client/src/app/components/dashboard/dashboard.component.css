@@ -3,7 +3,18 @@
 }
 
 .small-card{
-    height: 60px;
+    cursor: pointer;
+    background-color:#3b3a40;
+}
+
+.pointer{
+}
+
+.small-card label{
+    color:#f2d949;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .mb-5{
