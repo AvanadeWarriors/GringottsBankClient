@@ -1,5 +1,9 @@
+.container{
+    margin-top: 30px;
+}
+
 .big-card{
-    height: 245px;
+    height: 286px;
 }
 
 .small-card{
@@ -7,16 +11,42 @@
     background-color:#3b3a40;
 }
 
-.pointer{
+label{
+    font-size: 20px;
 }
+
+.big-card label{
+    color:#3b3a40;
+}
+
+.big-card .icon{
+    float: right;
+    cursor: pointer;
+}
+
 
 .small-card label{
     color:#f2d949;
-    font-size: 20px;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
 .mb-5{
     margin-bottom: 5px;
+}
+
+.yellow-icon {
+    color: #f2d949;
+}
+
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.yellow-icon svg {
+    fill: #f2d949;
+}
+
+.gray-icon{
+    color: #3b3a40;
+}
+
+.icon{
+    float: right;
 }
