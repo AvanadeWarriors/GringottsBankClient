@@ -25,7 +25,6 @@ import { SliderComponent } from './components/slider/slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import  { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
-import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -39,8 +38,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     StatementComponent,
     CreateAccountComponent,
     FooterComponent,
-    SliderComponent,
-    MatTabsModule
+    SliderComponent
   ],
   imports: [
     BrowserModule,
