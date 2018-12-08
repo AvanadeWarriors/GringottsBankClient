@@ -1,6 +1,6 @@
 import { StatementService } from './../../services/statement/statement.service';
 import { Component, OnInit } from '@angular/core';
-import { Transaction } from 'src/app/models/transaction.model';
+import { Transaction } from '../../models/transaction.model';
 
 @Component({
   selector: 'app-statement',
