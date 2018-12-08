@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col m6">
             <label>Conta Corrente</label>
+            <a>{{accountBalance.accountBalance}}</a>
           </div>
           <div *ngIf="viewAccount" class="col m6 ">
             <mat-icon class="gray-icon icon" (click)="changeView(viewAccount,'viewAccount')">visibility</mat-icon>
