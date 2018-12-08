@@ -22,7 +22,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
 import { SliderComponent } from './components/slider/slider.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -36,8 +37,7 @@ import {MatIconModule} from '@angular/material/icon';
     StatementComponent,
     CreateAccountComponent,
     FooterComponent,
-    SliderComponent,
-    
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +47,7 @@ import {MatIconModule} from '@angular/material/icon';
     FormsModule,
     HttpClientModule,
     MatIconModule,
+    MatCardModule,
     CommonModule,
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot()
