@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.loginService.login(this.customer.cpf, this.customer.password).subscribe(
       sucess => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/dashboard']);
       },
       error => {
         console.log(error.error.message);

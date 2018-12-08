@@ -1,4 +1,6 @@
+import { StatementService } from './../../services/statement/statement.service';
 import { Component, OnInit } from '@angular/core';
+import { Transaction } from 'src/app/models/transaction.model';
 
 @Component({
   selector: 'app-statement',
@@ -7,9 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatementComponent implements OnInit {
 
-  constructor() { }
+
+  transactions: Transaction[];
+  accountNumber: string;
+  filter: string;
+
+  constructor(private statementService: StatementService) { }
 
   ngOnInit() {
+  }
+
+  getStatements() {
+    this.statementService.getStatements(this.accountNumber, this.filter).subscribe(
+      success => {
+        this.transactions = success.accountStatement;
+        console.log(this.transactions);
+      }
+    );
+  }
+
+  getStatementInput() {
+    this.statementService.getStatementInput(this.accountNumber, this.filter).subscribe(
+      success => {
+        this.transactions = success.accountStatementInput;
+      }
+    );
+  }
+
+  getStatementOutput() {
+    this.statementService.getStatementOutput(this.accountNumber, this.filter).subscribe(
+      success => {
+        this.transactions = success.accountStatementOutput;
+      }
+    );
   }
 
 }
