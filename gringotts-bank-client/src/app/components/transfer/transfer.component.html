@@ -18,7 +18,7 @@
                     </div>
                     <div class="input-field">
                         <label for="targetCpf">CPF:</label>
-                        <input required type="text" name="targetCpf" id="targetCpf" [(ngModel)]="targetAccount.cpf">
+                        <input required type="text" name="targetCpf" id="targetCpf" [dropSpecialCharacters]="true" mask="000.000.000-00" [(ngModel)]="targetAccount.cpf">
                     </div>
                     <div class="input-field">
                         <label for="amount">Amount:</label>

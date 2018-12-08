@@ -2,7 +2,7 @@ import { LoginInterceptor } from './services/login/login.interceptor';
 import { LoginGuard } from './services/login/login.guard';
 import { LoginService } from './services/login/login.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
