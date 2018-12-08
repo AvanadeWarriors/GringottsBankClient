@@ -24,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { SliderComponent } from './components/slider/slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import  { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import  { MatTabsModule } from '@angular/material/tabs';
     FormsModule,
     HttpClientModule,
     MatIconModule,
+    MatCardModule,
     CommonModule,
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot()
