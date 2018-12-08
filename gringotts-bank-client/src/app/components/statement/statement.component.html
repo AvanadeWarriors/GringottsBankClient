@@ -5,35 +5,13 @@
       </div>
   </div>
 </div>
-
 <div class="row">
-  <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s3"><a ng-click="tab=tudo" ng-class="{'active' : tab==1}">Tudo</a></li>
-        <li class="tab col s3"><a ng-click="tab=entrada" ng-class="{'active' : tab==2}">Entrada</a></li>
-        <li class="tab col s3"><a ng-click="tab=saida" ng-class="{'active' : tab==3}">Saída</a></li>
-        <li class="tab col s3"><a ng-click="tab=futuros" ng-class="{'active' : tab==4}">Futuros</a></li>
-      </ul>
-  </div>
-  <div ng-app="" ng-init="tabs=['tudo','entrada','saida', 'futuros']"></div>
-    <div class="col s12" ng-show="tab == tudo" ng-repeat="tab in tabs">
-        {{ tab }}
+    <div class="col s12">
+        <mat-tab-group>
+            <mat-tab label="all"> Tudo </mat-tab>
+            <mat-tab label="entry"> Entrada </mat-tab>
+            <mat-tab label="out"> Saída </mat-tab>
+            <mat-tab label="future"> Futuros </mat-tab>
+        </mat-tab-group>
     </div>
-    <!-- <div class="col s12" ng-show="tab == entrada">
-        <div class="card-panel big-card">
-
-        </div>
-    </div>
-
-    <div class="col s12" ng-show="tab == saida">
-        <div class="card-panel big-card">
-
-        </div>
-    </div>
-
-    <div class="col s12" ng-show="tab == futuro">
-        <div class="card-panel big-card">
-
-        </div>
-    </div> -->
 </div>

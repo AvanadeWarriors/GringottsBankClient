@@ -37,6 +37,7 @@ import {MatIconModule} from '@angular/material/icon';
     CreateAccountComponent,
     FooterComponent,
     SliderComponent,
+    
   ],
   imports: [
     BrowserModule,
