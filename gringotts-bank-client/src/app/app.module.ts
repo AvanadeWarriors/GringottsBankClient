@@ -22,6 +22,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
 import { SliderComponent } from './components/slider/slider.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SliderComponent } from './components/slider/slider.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatIconModule,
     CommonModule,
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot()
