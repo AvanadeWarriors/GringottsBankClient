@@ -22,7 +22,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
 import { SliderComponent } from './components/slider/slider.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import  { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import {MatIconModule} from '@angular/material/icon';
     CreateAccountComponent,
     FooterComponent,
     SliderComponent,
-    
+    MatTabsModule
   ],
   imports: [
     BrowserModule,
