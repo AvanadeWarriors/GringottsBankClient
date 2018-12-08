@@ -36,7 +36,7 @@ import {MatIconModule} from '@angular/material/icon';
     StatementComponent,
     CreateAccountComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

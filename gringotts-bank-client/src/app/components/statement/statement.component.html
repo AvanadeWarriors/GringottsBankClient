@@ -1,16 +1,39 @@
-<h3>Extrato</h3>
-<h4>Saldo em conta {{ amount }}</h4>
 <div class="row">
   <div class="col s12">
-    <ul class="tabs">
-      <li class="tab col s3"><a href="#test1">Tudo</a></li>
-      <li class="tab col s3"><a class="active" href="#test2">Entrada</a></li>
-      <li class="tab col s3 disabled"><a href="#test3">Saída</a></li>
-      <li class="tab col s3"><a href="#test4">Futuros</a></li>
-    </ul>
+      <div class="card-panel big-card">
+          <h6>Saldo em conta {{ amount }}</h6>
+      </div>
   </div>
-  <div id="test1" class="col s12">Tudo</div>
-  <div id="test2" class="col s12">Entrada/div>
-  <div id="test3" class="col s12">Saída</div>
-  <div id="test4" class="col s12">Futuros</div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a ng-click="tab=tudo" ng-class="{'active' : tab==1}">Tudo</a></li>
+        <li class="tab col s3"><a ng-click="tab=entrada" ng-class="{'active' : tab==2}">Entrada</a></li>
+        <li class="tab col s3"><a ng-click="tab=saida" ng-class="{'active' : tab==3}">Saída</a></li>
+        <li class="tab col s3"><a ng-click="tab=futuros" ng-class="{'active' : tab==4}">Futuros</a></li>
+      </ul>
+  </div>
+  <div ng-app="" ng-init="tabs=['tudo','entrada','saida', 'futuros']"></div>
+    <div class="col s12" ng-show="tab == tudo" ng-repeat="tab in tabs">
+        {{ tab }}
+    </div>
+    <!-- <div class="col s12" ng-show="tab == entrada">
+        <div class="card-panel big-card">
+
+        </div>
+    </div>
+
+    <div class="col s12" ng-show="tab == saida">
+        <div class="card-panel big-card">
+
+        </div>
+    </div>
+
+    <div class="col s12" ng-show="tab == futuro">
+        <div class="card-panel big-card">
+
+        </div>
+    </div> -->
 </div>
