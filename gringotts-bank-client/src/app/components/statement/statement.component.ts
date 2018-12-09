@@ -11,12 +11,19 @@ export class StatementComponent implements OnInit {
 
 
   transactions: Transaction[];
+  transactionsInput: Transaction[];
+  transactionsOutput: Transaction[];
   accountNumber: string;
   filter: string;
 
   constructor(private statementService: StatementService) { }
 
   ngOnInit() {
+    this.accountNumber = JSON.parse(localStorage.getItem('currentUser')).accountNumber;
+    this.filter = '10';
+    this.getStatements();
+    this.getStatementInput();
+    this.getStatementOutput();
   }
 
   getStatements() {
@@ -31,7 +38,7 @@ export class StatementComponent implements OnInit {
   getStatementInput() {
     this.statementService.getStatementInput(this.accountNumber, this.filter).subscribe(
       success => {
-        this.transactions = success.accountStatementInput;
+        this.transactionsInput = success.accountStatementInput;
       }
     );
   }
@@ -39,7 +46,7 @@ export class StatementComponent implements OnInit {
   getStatementOutput() {
     this.statementService.getStatementOutput(this.accountNumber, this.filter).subscribe(
       success => {
-        this.transactions = success.accountStatementOutput;
+        this.transactionsOutput = success.accountStatementOutput;
       }
     );
   }

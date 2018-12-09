@@ -4,7 +4,7 @@ import { LoginService } from './services/login/login.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMaskModule } from 'ngx-mask';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,10 +23,14 @@ import { MatInputModule } from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
 import { SliderComponent } from './components/slider/slider.component';
 import { MatIconModule } from '@angular/material/icon';
-import  { MatTabsModule } from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { SliderDirective } from './directive/slider.directive';
-import { createCustomElement } from '@angular/elements';
+import { CurrencyBRLPipe } from './pipes/currencyBRL/currency-brl.pipe';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -41,7 +45,8 @@ import { createCustomElement } from '@angular/elements';
     CreateAccountComponent,
     FooterComponent,
     SliderComponent,
-    SliderDirective
+    SliderDirective,
+    CurrencyBRLPipe
   ],
   imports: [
     BrowserModule,
@@ -61,6 +66,7 @@ import { createCustomElement } from '@angular/elements';
   providers: [
     LoginService,
     LoginGuard,
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoginInterceptor,
@@ -70,9 +76,8 @@ import { createCustomElement } from '@angular/elements';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const slider = createCustomElement(SliderComponent, { injector });
-    customElements.define('motley-slider', slider);
+  constructor() {
+
   }
   ngDoBootstrap() {}
  }

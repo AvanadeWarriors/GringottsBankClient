@@ -50,3 +50,11 @@ label{
 .icon{
     float: right;
 }
+
+.negativeBalance{
+    color:red;
+}
+
+.floatR{
+    float: right;
+}

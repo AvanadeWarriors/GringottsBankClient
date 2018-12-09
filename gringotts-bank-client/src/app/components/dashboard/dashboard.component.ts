@@ -29,8 +29,10 @@ export class DashboardComponent implements OnInit {
 
   getAccountBalance() {
     this.accountService.getAccount(this.accountNumber)
-      .subscribe(response => this.accountBalance = response);
-    console.log(this.accountBalance);
+      .subscribe(response => {
+        this.accountBalance = response;
+        console.log(this.accountBalance);
+      });
   }
 
   changeView(view: boolean, nameView: string) {
