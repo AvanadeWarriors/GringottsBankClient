@@ -25,6 +25,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import  { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { SliderDirective } from './directive/slider.directive';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatCardModule } from '@angular/material/card';
     StatementComponent,
     CreateAccountComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    SliderDirective
   ],
   imports: [
     BrowserModule,
