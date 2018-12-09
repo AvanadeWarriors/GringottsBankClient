@@ -7,8 +7,8 @@
   <div [ngStyle]="{'transform': 'translateY('+ transform + '%' +')', 'transition': '.8s'}">
     <div class="text-wrapper">
       <div class="page-text" *ngFor="let i of sliderArray; let select = index;" [ngClass]="{'selected': select == selectedIndex}">
-        <h3>{{i.title}}</h3>
-        <p>{{i.text}}</p>
+        <h3>{{ i.title }}</h3> 
+         <p>{{ i.subtitle }}</p>
       </div>
     </div>
   </div>
