@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AccountService } from '../../services/account/account.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,11 +13,24 @@ export class DashboardComponent implements OnInit {
   viewAccount = false;
   viewInvestment = false;
   viewCreditCard = false;
+  accountNumber: string;
+  accountBalance: any[] = [];
 
   constructor(
-    private router: Router) { }
+    private router: Router,
+    private toastrService: ToastrService,
+    private accountService: AccountService
+  ) { }
 
   ngOnInit() {
+    this.accountNumber = JSON.parse(localStorage.getItem('currentUser')).accountNumber;
+    this.getAccountBalance();
+  }
+
+  getAccountBalance() {
+    this.accountService.getAccount(this.accountNumber)
+      .subscribe(response => this.accountBalance = response);
+    console.log(this.accountBalance);
   }
 
   changeView(view: boolean, nameView: string) {
