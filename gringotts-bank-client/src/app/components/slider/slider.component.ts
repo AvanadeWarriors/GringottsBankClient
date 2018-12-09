@@ -14,7 +14,7 @@ export class SliderComponent implements OnInit {
     this.transform = 100;
   }
 
-  sliderArray = [
+   sliderArray = [
     {img: 'assets/images/slider_child.jpg', alt: 'crianças se divertindo no mar', title: 'Para você', subtitle: 'Abra sua conta e tenha mais tempo para as pequenas coisas da vida.'},
     {img: 'assets/images/slider-break.jpg', alt: 'reunião de trabalho em um café', title: 'Para sua empresa', subtitle: 'Comodidade e agilidade para sua empresa crescer com segurança.'}
   ];

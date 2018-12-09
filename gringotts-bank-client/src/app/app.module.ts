@@ -26,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
 import  { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { SliderDirective } from './directive/slider.directive';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { SliderDirective } from './directive/slider.directive';
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot()
   ],
+  entryComponents: [SliderComponent],
   providers: [
     LoginService,
     LoginGuard,
@@ -67,4 +69,10 @@ import { SliderDirective } from './directive/slider.directive';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const slider = createCustomElement(SliderComponent, { injector });
+    customElements.define('motley-slider', slider);
+  }
+  ngDoBootstrap() {}
+ }
