@@ -31,6 +31,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { MatStepperModule } from '@angular/material/stepper';
 
+
 registerLocaleData(localePt);
 
 @NgModule({
@@ -81,5 +82,4 @@ export class AppModule {
   constructor() {
 
   }
-  ngDoBootstrap() {}
  }
