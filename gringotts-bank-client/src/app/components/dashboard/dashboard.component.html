@@ -26,7 +26,7 @@
                 <label>Saldo:</label>
               </div>
               <div class="col m6">
-                <label *ngIf="!(accountBalance.accountBalance > 0)" class="floatR negativeBalance" style="color: red">{{accountBalance.accountBalance
+                <label *ngIf="!(accountBalance.accountBalance > 0)" class="floatR negativeBalance">{{accountBalance.accountBalance
                   | currency
                   :'BRL':true:'1.0-0'}}</label>
                 <label *ngIf="accountBalance.accountBalance > 0" class="floatR">{{accountBalance.accountBalance |
@@ -39,6 +39,11 @@
                 <a class="floatR" href="/statement">Ver Extrato</a>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="!viewAccount" style="color: 1px solid red;">
+          <div class="col m12">
+            <img style="height: 50px; position: relative; margin: auto" src="assets/images/mobile-bank.svg" alt="Gringotts">
           </div>
         </div>
       </div>
@@ -56,6 +61,16 @@
             <mat-icon class="gray-icon icon" (click)="changeView(viewCreditCard,'viewCreditCard')">visibility_off</mat-icon>
           </div>
         </div>
+        <div class="row" *ngIf="viewCreditCard">
+          <div class="col m12">
+            <div class="col m12"><label>Texto x</label></div>
+          </div>
+        </div>
+        <div class="row" *ngIf="!viewCreditCard">
+          <div class="col m12">
+            <img style="height: 50px; position: relative; margin: auto" src="assets/images/credit-card.svg" alt="Gringotts">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -71,6 +86,16 @@
           </div>
           <div *ngIf="!viewInvestment" class="col m6 ">
             <mat-icon class="gray-icon icon" (click)="changeView(viewInvestment,'viewInvestment')">visibility_off</mat-icon>
+          </div>
+        </div>
+        <div class="row" *ngIf="viewInvestment">
+          <div class="col m12">
+            <div class="col m12"><label>Texto x</label></div>
+          </div>
+        </div>
+        <div class="row" *ngIf="!viewInvestment">
+          <div class="col m12">
+            <img style="height: 50px; position: relative; margin: auto" src="assets/images/growth.svg" alt="Gringotts">
           </div>
         </div>
       </div>
