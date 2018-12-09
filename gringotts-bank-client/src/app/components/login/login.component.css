@@ -5,40 +5,40 @@
     text-align: center;
 }
 .btn-gringotts{
-    background-color: #f2d949;
+    background-color: #F9D423;
     color: #3b3a40;
 }
 .fa-lock, .fa-user-circle{
     font-size: 16px;
 }
 input#input_text:focus{
-    border-bottom: 1px solid #f2d949;
-    box-shadow: 0 1px 0 0 #f2d949;
+    border-bottom: 1px solid rgb(249,212,35);
+    box-shadow: 0 1px 0 0 rgb(249,212,35);
 }
 input#input_password:focus{
-    border-bottom: 1px solid #f2d949;
-    box-shadow: 0 1px 0 0 #f2d949;
+    border-bottom: 1px solid rgb(249,212,35);
+    box-shadow: 0 1px 0 0 rgb(249,212,35);
 }
 .input-field label.active{
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
 /* label underline focus color */
 .input-field input[type=text]:focus {
-    border-bottom: 1px solid #f2d949;
-    box-shadow: 0 1px 0 0 #f2d949;
+    border-bottom: 1px solid rgb(249,212,35);
+    box-shadow: 0 1px 0 0 rgb(249,212,35);
 }
 .input-field input[type=password]:focus {
-    border-bottom: 1px solid #f2d949;
-    box-shadow: 0 1px 0 0 #f2d949;
+    border-bottom: 1px solid rgb(249,212,35);
+    box-shadow: 0 1px 0 0 rgb(249,212,35);
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
     color: #f2d949;
 }
 .input-field input[type=password]:focus + label {
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
 /* icon prefix focus color */
 .input-field .prefix.active {
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
