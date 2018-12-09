@@ -1,3 +1,6 @@
-.tabs .tab a {
-    color: #f2d949;
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: rgb(249,212,35) !important;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: rgb(249,212,35) !important;
 }

@@ -1,17 +1,51 @@
 <div class="row">
-    <div class="col s12">
+    <div class="col s12 m4">
         <div class="card-panel big-card">
             <h6>Saldo em conta {{ amount }}</h6>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col s12">
+    <div class="col s12 m8">
         <mat-tab-group>
-            <mat-tab label="all"> Tudo </mat-tab>
-            <mat-tab label="entry"> Entrada </mat-tab>
-            <mat-tab label="out"> Saída </mat-tab>
-            <mat-tab label="future"> Futuros </mat-tab>
+            <mat-tab label="Tudo">
+                <mat-vertical-stepper>
+                    <mat-step label="9 de dezembro">
+                      Taxa da Conta Corrente: R$ 29,00
+                    </mat-step>
+                    <mat-step label="8 de dezembro">
+                        RSHOP-McDonalds: R$ 15,60
+                    </mat-step>
+                  </mat-vertical-stepper>
+            </mat-tab>
+            <mat-tab label="Entrada"> 
+                <mat-vertical-stepper>
+                    <mat-step label="9 de dezembro">
+                      Taxa da Conta Corrente: R$ 29,00
+                    </mat-step>
+                    <mat-step label="8 de dezembro">
+                        RSHOP-McDonalds: R$ 15,60
+                    </mat-step>
+                  </mat-vertical-stepper>
+            </mat-tab>
+            <mat-tab label="Saída"> 
+                <mat-vertical-stepper>
+                    <mat-step label="9 de dezembro">
+                      Taxa da Conta Corrente: R$ 29,00
+                    </mat-step>
+                    <mat-step label="8 de dezembro">
+                        RSHOP-McDonalds: R$ 15,60
+                    </mat-step>
+                  </mat-vertical-stepper>
+            </mat-tab>
+            <mat-tab label="Futuros"> 
+                    <mat-vertical-stepper>
+                        <mat-step label="9 de dezembro">
+                            Taxa da Conta Corrente: R$ 29,00
+                        </mat-step>
+                        <mat-step label="8 de dezembro">
+                            RSHOP-McDonalds: R$ 15,60
+                        </mat-step>
+                    </mat-vertical-stepper>
+            </mat-tab>
         </mat-tab-group>
     </div>
 </div>
