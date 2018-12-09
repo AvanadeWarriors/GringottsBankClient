@@ -5,13 +5,40 @@
         <div class="row">
           <div class="col m6">
             <label>Conta Corrente</label>
-            <a>{{accountBalance.accountBalance}}</a>
           </div>
           <div *ngIf="viewAccount" class="col m6 ">
             <mat-icon class="gray-icon icon" (click)="changeView(viewAccount,'viewAccount')">visibility</mat-icon>
           </div>
           <div *ngIf="!viewAccount" class="col m6 ">
             <mat-icon class="gray-icon icon" (click)="changeView(viewAccount,'viewAccount')">visibility_off</mat-icon>
+          </div>
+        </div>
+        <div class="row" *ngIf="viewAccount">
+          <div class="col m12">
+            <div class="row">
+              <div class="col m12"><label>Conta Gringotts</label></div>
+            </div>
+            <div class="row">
+              <div class="col m6"><label>Conta: {{accountNumber}}</label></div>
+            </div>
+            <div class="row">
+              <div class="col m6">
+                <label>Saldo:</label>
+              </div>
+              <div class="col m6">
+                <label *ngIf="!(accountBalance.accountBalance > 0)" class="floatR negativeBalance" style="color: red">{{accountBalance.accountBalance
+                  | currency
+                  :'BRL':true:'1.0-0'}}</label>
+                <label *ngIf="accountBalance.accountBalance > 0" class="floatR">{{accountBalance.accountBalance |
+                  currency
+                  :'BRL':true:'1.0-0'}}</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m12">
+                <a class="floatR" href="/statement">Ver Extrato</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
