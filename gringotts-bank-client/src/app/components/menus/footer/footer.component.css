@@ -5,7 +5,7 @@ footer a{
     color: #ffffff;
 }
 footer a:hover{
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
 .standup{
     display: flex;
