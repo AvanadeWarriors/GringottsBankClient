@@ -3,7 +3,8 @@ img {
 }
 
 .wrapper {
-  height:533px;
+  min-height:533px;
+  height: 100%;
   overflow: hidden;
 }
 

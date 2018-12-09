@@ -9,7 +9,6 @@ import { Transaction } from '../../models/transaction.model';
 })
 export class StatementComponent implements OnInit {
 
-
   transactions: Transaction[];
   transactionsInput: Transaction[];
   transactionsOutput: Transaction[];
