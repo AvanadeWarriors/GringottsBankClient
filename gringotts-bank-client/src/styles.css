@@ -8,3 +8,7 @@
 .mat-tab-group.mat-primary .mat-ink-bar,.mat-tab-nav-bar.mat-primary .mat-ink-bar{
     background-color:rgb(249,212,35) !important;
 }
+
+.negativeBalance{
+    color:red !important;
+}

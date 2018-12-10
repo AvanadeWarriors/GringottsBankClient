@@ -30,7 +30,7 @@ export class TransferComponent implements OnInit {
 
 
   getAccount() {
-    if (this.transaction.targetAccountNumber.toString().length >= 5) {
+    if (this.transaction.targetAccountNumber && this.transaction.targetAccountNumber.toString().length >= 5) {
       this.transactionService.getAccount(this.transaction).subscribe(response => {
         this.targetAccount = response.accountData;
         console.log(response.accountData);

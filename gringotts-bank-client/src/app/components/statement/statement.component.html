@@ -3,7 +3,8 @@
         <div class="card-panel big-card">
             <h5>{{ name }} </h5>
             <h5> Conta: {{ accountNumber }}</h5>
-            <h6>Saldo em conta: {{ balance | currency: 'BRL' }}</h6>
+            <h6>Saldo em conta: <span *ngIf="!(balance > 0)" class="negativeBalance">{{ balance | currency: 'BRL' }}</span>
+                <span *ngIf="(balance > 0)">{{balance | currency: 'BRL' }}</span></h6>
         </div>
     </div>
     <div class="col s12 m8">
@@ -11,21 +12,27 @@
             <mat-tab label="Tudo">
                 <mat-vertical-stepper *ngFor="let i of transactions">
                     <mat-step label="{{i.transactionTime | date: 'dd/MM/yyyy'}}">
-                        {{i.description}}: {{i.amount | currency: 'BRL' }}
+                        {{i.description}}: <span *ngIf="!(i.amount > 0)" class="negativeBalance">{{i.amount | currency:
+                            'BRL' }}</span><span *ngIf="(i.amount > 0)">{{i.amount | currency:
+                            'BRL' }}</span>
                     </mat-step>
                 </mat-vertical-stepper>
             </mat-tab>
             <mat-tab label="Entrada">
                 <mat-vertical-stepper *ngFor="let i of transactionsInput">
                     <mat-step label="{{i.transactionTime | date: 'dd/MM/yyyy'}}">
-                        {{i.description}}: {{i.amount | currency: 'BRL' }}
+                        {{i.description}}: <span *ngIf="!(i.amount > 0)" class="negativeBalance">{{i.amount | currency:
+                            'BRL' }}</span>
+                        <span *ngIf="(i.amount > 0)">{{i.amount | currency: 'BRL' }}</span>
                     </mat-step>
                 </mat-vertical-stepper>
             </mat-tab>
             <mat-tab label="Saída">
                 <mat-vertical-stepper *ngFor="let i of transactionsOutput">
                     <mat-step label="{{i.transactionTime | date: 'dd/MM/yyyy'}}">
-                        {{i.description}}: {{i.amount | currency: 'BRL' }}
+                        {{i.description}}: <span *ngIf="!(i.amount > 0)" class="negativeBalance">{{i.amount | currency:
+                            'BRL' }}</span>
+                        <span *ngIf="(i.amount > 0)">{{i.amount | currency: 'BRL' }}</span>
                     </mat-step>
                 </mat-vertical-stepper>
             </mat-tab>
