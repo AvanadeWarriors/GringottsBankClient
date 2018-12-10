@@ -48,3 +48,6 @@ input#input_password:focus{
 .input-field .prefix.active {
     color: rgb(249,212,35);
 }
+i{
+    color: #3b3a40;
+}

@@ -29,7 +29,7 @@ input#input_text:focus{
     color: rgb(249,212,35);
 } 
 i{
-    color: rgb(249,212,35);
+    color: #3b3a40;
 }
 .example-form {
     min-width: 150px;
