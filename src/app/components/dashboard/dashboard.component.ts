@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
   viewCreditCard = false;
   accountNumber: string;
   accountBalance: any[] = [];
+  name: string;
 
   constructor(
     private router: Router,
@@ -26,6 +27,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.accountNumber = JSON.parse(localStorage.getItem('currentUser')).accountNumber;
+    this.name = JSON.parse(localStorage.getItem('currentUser')).name;
     this.getAccountBalance();
   }
 
