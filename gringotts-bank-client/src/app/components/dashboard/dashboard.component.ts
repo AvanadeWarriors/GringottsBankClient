@@ -33,7 +33,6 @@ export class DashboardComponent implements OnInit {
     this.accountService.getAccount(this.accountNumber)
       .subscribe(response => {
         this.accountBalance = response;
-        console.log(this.accountBalance);
       });
   }
 

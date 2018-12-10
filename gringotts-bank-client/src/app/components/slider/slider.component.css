@@ -1,10 +1,12 @@
 .img-one {
   background: url('../../../assets/images/slider_child.jpg') no-repeat;
   background-size: cover;
+  background-position-y: bottom;
 }
 .img-two {
   background: url('../../../assets/images/slider-break.jpg') no-repeat;
   background-size: cover;
+  background-position-y: top;
 }
 .item{
   display: flex;

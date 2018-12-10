@@ -1,13 +1,13 @@
 <div class="row">
-    <div class="col s12 m4 pt-space pb-space">
+    <div class="col s12 m4 pt-space">
         <div class="card-panel big-card">
-            <h5>{{ name }} </h5>
+            <h5><i class="material-icons dp48">account_circle</i> {{ name }} </h5>
             <h5> Conta: {{ accountNumber }}</h5>
             <h6>Saldo em conta: <span *ngIf="!(balance > 0)" class="negativeBalance">{{ balance | currency: 'BRL' }}</span>
                 <span *ngIf="(balance > 0)">{{balance | currency: 'BRL' }}</span></h6>
         </div>
     </div>
-    <div class="col s12 m8">
+    <div class="col s12 m8 pt-space pb-space">
         <mat-tab-group>
             <mat-tab label="Tudo">
                 <mat-vertical-stepper *ngFor="let i of transactions">

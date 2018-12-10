@@ -11,7 +11,7 @@
     padding-bottom: 8rem;
 }
 .btn-gringotts{
-    background-color: #F9D423;
+    background-color: rgb(249,212,35);
     color: #3b3a40;
 }
 .fa-lock, .fa-user-circle{
@@ -39,7 +39,7 @@ input#input_password:focus{
 }
 /* label focus color */
 .input-field input[type=text]:focus + label {
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
 .input-field input[type=password]:focus + label {
     color: rgb(249,212,35);
