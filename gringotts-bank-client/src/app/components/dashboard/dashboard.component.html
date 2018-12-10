@@ -27,11 +27,9 @@
               </div>
               <div class="col m6">
                 <label *ngIf="!(accountBalance.accountBalance > 0)" class="floatR negativeBalance">{{accountBalance.accountBalance
-                  | currency
-                  :'BRL':true:'1.0-0'}}</label>
+                  | currency: 'BRL' }}</label>
                 <label *ngIf="accountBalance.accountBalance > 0" class="floatR">{{accountBalance.accountBalance |
-                  currency
-                  :'BRL':true:'1.0-0'}}</label>
+                  currency: 'BRL'}}</label>
               </div>
             </div>
             <div class="row">
@@ -67,7 +65,9 @@
         </div>
         <div class="row" *ngIf="viewCreditCard">
           <div class="col m12">
-            <div class="col m12"><label>Texto x</label></div>
+            <div class="col m12"><label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et unde vero
+                exercitationem
+                odit.</label></div>
           </div>
         </div>
         <div class="row" *ngIf="!viewCreditCard">
@@ -98,7 +98,9 @@
         </div>
         <div class="row" *ngIf="viewInvestment">
           <div class="col m12">
-            <div class="col m12"><label>Texto x</label></div>
+            <div class="col m12"><label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et unde vero
+                exercitationem
+                odit.</label></div>
           </div>
         </div>
         <div class="row" *ngIf="!viewInvestment">
