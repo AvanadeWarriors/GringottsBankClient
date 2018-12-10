@@ -2,43 +2,38 @@
     <div class="col s12 m4">
         <div class="card-panel big-card">
             <h5>{{ name }} </h5>
-            <h5> {{ accountNumber }}</h5>
-            <h6>Saldo em conta: {{ accountNumber }}</h6>
+            <h5> Conta: {{ accountNumber }}</h5>
+            <h6>Saldo em conta: {{ balance | currency: 'BRL' }}</h6>
         </div>
     </div>
     <div class="col s12 m8">
         <mat-tab-group>
             <mat-tab label="Tudo">
                 <mat-vertical-stepper *ngFor="let i of transactions">
-                    <mat-step label="{{i.account}}">
-                      {{i.transactions }}
+                    <mat-step label="{{i.transactionTime | date: 'dd/MM/yyyy'}}">
+                        {{i.description}}: {{i.amount | currency: 'BRL' }}
                     </mat-step>
-                    <mat-step label="8 de dezembro">
-                      {{i.transactions}}
-                    </mat-step>
-                  </mat-vertical-stepper>
+                </mat-vertical-stepper>
             </mat-tab>
-            <mat-tab label="Entrada"> 
-                <mat-vertical-stepper>
-                    <mat-step label="9 de dezembro">
-                      Taxa da Conta Corrente: R$ 29,00
+            <mat-tab label="Entrada">
+                <mat-vertical-stepper *ngFor="let i of transactionsInput">
+                    <mat-step label="{{i.transactionTime | date: 'dd/MM/yyyy'}}">
+                        {{i.description}}: {{i.amount | currency: 'BRL' }}
                     </mat-step>
-                    <mat-step label="8 de dezembro">
+                    <!-- <mat-step label="8 de dezembro">
                         RSHOP-McDonalds: R$ 15,60
-                    </mat-step>
-                  </mat-vertical-stepper>
+                    </mat-step> -->
+                </mat-vertical-stepper>
             </mat-tab>
-            <mat-tab label="Saída"> 
-                <mat-vertical-stepper>
-                    <mat-step label="9 de dezembro">
-                      Taxa da Conta Corrente: R$ 29,00
+            <mat-tab label="Saída">
+                <mat-vertical-stepper *ngFor="let i of transactionsOutput">
+                    <mat-step label="{{i.transactionTime | date: 'dd/MM/yyyy'}}">
+                        {{i.description}}: {{i.amount | currency: 'BRL' }}
                     </mat-step>
-                    <mat-step label="8 de dezembro">
-                        RSHOP-McDonalds: R$ 15,60
-                    </mat-step>
-                  </mat-vertical-stepper>
+
+                </mat-vertical-stepper>
             </mat-tab>
-            <mat-tab label="Futuros"> 
+            <!-- <mat-tab label="Futuros"> 
                     <mat-vertical-stepper>
                         <mat-step label="9 de dezembro">
                             Taxa da Conta Corrente: R$ 29,00
@@ -47,8 +42,7 @@
                             RSHOP-McDonalds: R$ 15,60
                         </mat-step>
                     </mat-vertical-stepper>
-            </mat-tab>
+            </mat-tab> -->
         </mat-tab-group>
     </div>
 </div>
-

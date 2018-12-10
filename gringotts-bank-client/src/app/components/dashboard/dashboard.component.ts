@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from '../../services/account/account.service';
+import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -19,7 +20,8 @@ export class DashboardComponent implements OnInit {
   constructor(
     private router: Router,
     private toastrService: ToastrService,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private loginService: LoginService
   ) { }
 
   ngOnInit() {
@@ -54,4 +56,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl(location);
   }
 
+  logout() {
+    this.loginService.logout();
+    this.redirectTo('/home');
+  }
 }

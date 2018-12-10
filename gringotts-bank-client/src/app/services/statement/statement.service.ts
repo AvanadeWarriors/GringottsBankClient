@@ -17,10 +17,10 @@ export class StatementService {
   }
 
   getStatementInput(numberAccount: string, filter: string) {
-    return this.http.get<any>(this.URL_API + '/account/statement/input' + numberAccount + '/' + filter);
+    return this.http.get<any>(this.URL_API + '/account/statement/input/' + numberAccount + '/' + filter);
   }
 
   getStatementOutput(numberAccount: string, filter: string) {
-    return this.http.get<any>(this.URL_API + '/account/statement/output' + numberAccount + '/' + filter);
+    return this.http.get<any>(this.URL_API + '/account/statement/output/' + numberAccount + '/' + filter);
   }
 }
