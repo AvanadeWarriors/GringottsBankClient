@@ -53,10 +53,14 @@ label{
 
 .floatR{
     float: right;
+}
+.link {
     color: #3b3a40 !important;
+    cursor: pointer;
+    text-decoration-line: underline;
 }
 
-.floatR:hover{
+.link:hover{
     color:rgb(249,212,35) !important;
 }
 
