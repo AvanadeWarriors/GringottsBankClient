@@ -26,7 +26,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { SliderDirective } from './directive/slider.directive';
-import { CurrencyBRLPipe } from './pipes/currencyBRL/currency-brl.pipe';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -47,8 +46,7 @@ registerLocaleData(localePt);
     CreateAccountComponent,
     FooterComponent,
     SliderComponent,
-    SliderDirective,
-    CurrencyBRLPipe
+    SliderDirective
   ],
   imports: [
     BrowserModule,

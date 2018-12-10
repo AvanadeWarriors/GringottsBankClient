@@ -1,3 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '../node_modules/materialize-css/dist/css/materialize.min.css';
+.mat-step-header .mat-step-icon-selected,.mat-step-header .mat-step-icon-state-done,.mat-step-header .mat-step-icon-state-edit{
+    background-color:rgb(249,212,35)  !important;
+    color: rgb(249,212,35) !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar,.mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color:rgb(249,212,35) !important;
+}
