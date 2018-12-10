@@ -58,3 +58,22 @@ label{
 .floatR{
     float: right;
 }
+
+.img-area {
+    margin: auto;
+    position: relative;
+    height: 120px;
+    width: 120px;
+}
+.img-area img {
+    margin: auto;
+    width: 100%;
+}
+
+.text-card {
+    text-align: center;
+}
+
+.tittle-card{
+    font-weight: bold !important;
+}
