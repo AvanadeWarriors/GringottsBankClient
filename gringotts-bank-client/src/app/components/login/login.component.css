@@ -4,6 +4,12 @@
 .center{
     text-align: center;
 }
+.pt-space{
+    padding-top: 8rem;
+}
+.pb-space{
+    padding-bottom: 8rem;
+}
 .btn-gringotts{
     background-color: #F9D423;
     color: #3b3a40;
