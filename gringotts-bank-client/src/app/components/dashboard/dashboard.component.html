@@ -3,7 +3,7 @@
     <div class="col s6 m6">
       <div class="card-panel big-card">
         <div class="row">
-          <div class="col m6">
+          <div class="col m6 tittle-card">
             <label>Conta Corrente</label>
           </div>
           <div *ngIf="viewAccount" class="col m6 ">
@@ -41,9 +41,13 @@
             </div>
           </div>
         </div>
-        <div class="row" *ngIf="!viewAccount" style="color: 1px solid red;">
+        <div class="row" *ngIf="!viewAccount">
           <div class="col m12">
-            <img style="height: 50px; position: relative; margin: auto" src="assets/images/mobile-bank.svg" alt="Gringotts">
+            <div class="img-area">
+              <img src="../../../assets/images/mobile-bank.svg" alt="">
+            </div>
+            <p class="text-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et unde vero exercitationem
+              odit.</p>
           </div>
         </div>
       </div>
@@ -51,7 +55,7 @@
     <div class="col s6 m6">
       <div class="card-panel big-card">
         <div class="row">
-          <div class="col m6">
+          <div class="col m6 tittle-card">
             <label>Cartão de Crédito</label>
           </div>
           <div *ngIf="viewCreditCard" class="col m6 ">
@@ -68,7 +72,11 @@
         </div>
         <div class="row" *ngIf="!viewCreditCard">
           <div class="col m12">
-            <img style="height: 50px; position: relative; margin: auto" src="assets/images/credit-card.svg" alt="Gringotts">
+            <div class="img-area">
+              <img src="../../../assets/images/credit-card.svg" alt="">
+            </div>
+            <p class="text-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et unde vero exercitationem
+              odit.</p>
           </div>
         </div>
       </div>
@@ -78,7 +86,7 @@
     <div class="col s6 m6">
       <div class="card-panel big-card">
         <div class="row">
-          <div class="col m6">
+          <div class="col m6 tittle-card">
             <label>Investimentos</label>
           </div>
           <div *ngIf="viewInvestment" class="col m6 ">
@@ -95,7 +103,11 @@
         </div>
         <div class="row" *ngIf="!viewInvestment">
           <div class="col m12">
-            <img style="height: 50px; position: relative; margin: auto" src="assets/images/growth.svg" alt="Gringotts">
+            <div class="img-area">
+              <img src="../../../assets/images/growth.svg" alt="">
+            </div>
+            <p class="text-card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et unde vero exercitationem
+              odit.</p>
           </div>
         </div>
       </div>
