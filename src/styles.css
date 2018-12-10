@@ -12,3 +12,7 @@
 .negativeBalance{
     color:red !important;
 }
+
+.mat-menu-panel {
+    background:  #3b3a40;   
+}

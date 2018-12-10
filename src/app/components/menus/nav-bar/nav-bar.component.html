@@ -1,17 +1,10 @@
-<div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper gringotts-gray">
-      <a href="#" class="brand-logo left" [routerLink]="['/']"><img src="assets/images/gringotts_vazado.svg" alt="Gringotts"></a>
-      <ul id="nav-mobile" class="right" *ngIf="!usuarioLogado">
-        <li><a class="nav-link" [routerLink]="['/login']" href="#">Acesse sua conta</a></li>
-        <li><a class="nav-link" href="#">Abra sua conta</a></li>
-      </ul>
-      <ul id="nav-mobile" class="right " *ngIf="usuarioLogado">
-        <li><a class="nav-link" (click)="logout()" href="#">Sair</a></li>
-      </ul>
-      <ul id="nav-mobile" class="right " *ngIf="usuarioLogado">
-        <li><a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a></li>
-      </ul>
-    </div>
-  </nav>
-</div>
+<nav class="gringotts-gray">
+  <a class="right" mat-button [matMenuTriggerFor]="menu" style="cursor: pointer;"><i class="fas fa-bars"></i></a>
+  <a class="brand-logo"><img src="assets/images/gringotts_vazado.svg" alt="Gringotts"></a>
+  <mat-menu #menu="matMenu">
+    <span *ngIf="!usuarioLogado"> <a class="nav-link" mat-menu-item [routerLink]="['/login']" href="#">Acesse sua conta</a></span>
+    <span *ngIf="usuarioLogado">
+      <a class="nav-link" mat-menu-item [routerLink]="['/dashboard']" href="#">Dashboard</a>
+      <a class="nav-link" mat-menu-item (click)="logout()" href="#">Sair</a></span>
+  </mat-menu>
+</nav>
