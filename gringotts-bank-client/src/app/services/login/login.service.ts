@@ -26,7 +26,6 @@ export class LoginService {
 
 
   private setSession(authResult) {
-
     const token = authResult.token;
     const user = authResult.data;
 
@@ -36,10 +35,6 @@ export class LoginService {
     localStorage.setItem('token', token);
     localStorage.setItem('currentUser', JSON.stringify(user));
     localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
-
-    // this.usuario = user;
-
-
   }
 
   get token(): string {
@@ -64,7 +59,6 @@ export class LoginService {
 
 
   logout() {
-    console.log('Deslogando');
     localStorage.removeItem('token');
     localStorage.removeItem('expires_at');
     localStorage.removeItem('currentUser');

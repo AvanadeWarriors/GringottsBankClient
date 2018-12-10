@@ -34,7 +34,6 @@ export class StatementComponent implements OnInit {
     this.statementService.getStatements(this.accountNumber, this.filter).subscribe(
       success => {
         this.transactions = success.accountStatement;
-        console.log(this.transactions);
       }
     );
   }
