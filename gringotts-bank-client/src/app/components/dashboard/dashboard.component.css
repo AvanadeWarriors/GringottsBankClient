@@ -52,7 +52,7 @@ label{
 }
 
 .negativeBalance{
-    color:red;
+    color:red !important;
 }
 
 .floatR{
