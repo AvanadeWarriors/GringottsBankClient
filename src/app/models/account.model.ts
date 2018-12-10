@@ -9,5 +9,7 @@ export class Account {
     lastIp: string;
     lastUserAgent: string;
     createdTime: Date;
+    name: string;
+    cpf: string;
     contacts: [Contact];
 }
