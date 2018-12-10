@@ -26,7 +26,7 @@ label{
 
 
 .small-card label{
-    color:#f2d949;
+    color:rgb(249,212,35);
     cursor: pointer;
 }
 
@@ -35,12 +35,12 @@ label{
 }
 
 .yellow-icon {
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
 
 /* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
 .yellow-icon svg {
-    fill: #f2d949;
+    fill: rgb(249,212,35);
 }
 
 .gray-icon{

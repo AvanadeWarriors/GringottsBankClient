@@ -17,26 +17,25 @@ input#input_text:focus{
 }
 /* label underline focus color */
  .input-field input[type=text]:focus {
-    border-bottom: 1px solid #f2d949;
-    box-shadow: 0 1px 0 0 #f2d949;
+    border-bottom: 1px solid rgb(249,212,35);
+    box-shadow: 0 1px 0 0 rgb(249,212,35);
 } 
 /* label focus color */
  .input-field input[type=text]:focus + label {
-    color: #f2d949;
+    color: rgb(249,212,35);
 }
 /* icon prefix focus color */
  .input-field .prefix.active {
-    color: #f2d949;
+    color: rgb(249,212,35);
 } 
-
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
   }
   
-  .example-full-width {
-    width: 100%;
-  }
+.example-full-width {
+width: 100%;
+}
 
 
