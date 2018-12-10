@@ -1,28 +1,24 @@
 <div class="container">
-    <div class="row valign-wrapper">
+    <div class="row valign-wrapper pt-space pb-space">
         <div class="col s12 m6 offset-m3 valign">
             <div class="card-panel center">
+                <span class="card-title"><i class="material-icons large dp48">import_export</i></span>
                 <div class="input-field">
-                    <label for="accountNumber">Número da conta:</label>
-                    <input required type="text" disabled name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
+                    <input placeholder="Numero da conta" required type="hidden"  disabled name="accountNumber" id="accountNumber" [(ngModel)]="transaction.accountNumber">
                 </div>
                 <form #transferForm="ngForm">
                     <div class="input-field">
-                        <label for="targetAccountNumber">Conta destino:</label>
-                        <input required type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber"
+                        <input placeholder="Conta destino" required type="text" name="targetAccountNumber" id="targetAccountNumber" [(ngModel)]="transaction.targetAccountNumber"
                             (ngModelChange)="getAccount()">
                     </div>
                     <div class="input-field">
-                        <label for="targetName">Nome favorecido:</label>
-                        <input required type="text" name="targetName" id="targetName" [(ngModel)]="targetAccount.name">
+                        <input placeholder="Nome favorecido" required type="text" name="targetName" id="targetName" [(ngModel)]="targetAccount.name">
                     </div>
                     <div class="input-field">
-                        <label for="targetCpf">CPF:</label>
-                        <input required type="text" name="targetCpf" id="targetCpf" [dropSpecialCharacters]="true" mask="000.000.000-00" [(ngModel)]="targetAccount.cpf">
+                        <input placeholder="CPF" required type="text" name="targetCpf" id="targetCpf" [dropSpecialCharacters]="true" mask="000.000.000-00" [(ngModel)]="targetAccount.cpf">
                     </div>
                     <div class="input-field">
-                        <label for="amount">Amount:</label>
-                        <input required type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
+                        <input placeholder="Valor" required type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
                     </div>
                     <button class="btn btn-gringotts waves-effect waves-light" type="text" (click)="createTransaction(); transferForm.reset()">Enviar</button>
                 </form>
@@ -31,30 +27,3 @@
     </div>
 
 </div>
-
-
-
-<!-- <div class="example-container">
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Número da conta" [(ngModel)]="transaction.accountNumber" name="accountNumber">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Conta destino" [(ngModel)]="transaction.targetAccount" name="targetAccount" (ngModelChange)="getAccount()">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Nome destino" [(ngModel)]="targetAccount.name" name="targetAccountName">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="CPF destino" [(ngModel)]="targetAccount.cpf" name="targetAccountCpf">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Amount" [(ngModel)]="transaction.amount" name="transactionAmount">
-        </mat-form-field>
-
-    </form>
-</div> -->

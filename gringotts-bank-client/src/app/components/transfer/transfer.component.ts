@@ -13,6 +13,7 @@ export class TransferComponent implements OnInit {
 
   transaction = new Transaction();
   targetAccount = new Account();
+  account: any;
 
   constructor(private transactionService: TransactionService, private toastrService: ToastrService) { }
   ngOnInit() {
@@ -29,15 +30,11 @@ export class TransferComponent implements OnInit {
 
 
   getAccount() {
-    this.transactionService.getAccount(this.transaction).subscribe(response => {
-      this.targetAccount = response.accountData;
-      console.log(response.accountData);
-    });
+    if (this.transaction.targetAccountNumber.toString().length >= 5) {
+      this.transactionService.getAccount(this.transaction).subscribe(response => {
+        this.targetAccount = response.accountData;
+        console.log(response.accountData);
+      });
+    }
   }
-
-
-  mostraValores() {
-    console.log('Valores: ' + JSON.stringify(this.transaction));
-  }
-
 }

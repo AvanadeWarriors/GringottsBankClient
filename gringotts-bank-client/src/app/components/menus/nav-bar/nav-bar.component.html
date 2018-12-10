@@ -3,14 +3,13 @@
     <div class="nav-wrapper gringotts-gray">
       <a href="#" class="brand-logo left" [routerLink]="['/']"><img src="assets/images/gringotts_vazado.svg" alt="Gringotts"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right hide-on-med-and-down" *ngIf="!usuarioLogado">
         <li><a class="nav-link" [routerLink]="['/login']" href="#">Acesse sua conta</a></li>
         <li><a class="nav-link" href="#">Abra sua conta</a></li>
       </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" *ngIf="usuarioLogado">
+        <li><a class="nav-link" [routerLink]="['/dashboard']" href="#">Dashboard</a></li>
+      </ul>
     </div>
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">Acesse sua conta</a></li>
-      <li><a href="#">Abra sua conta</a></li>
-    </ul>
   </nav>
 </div>
