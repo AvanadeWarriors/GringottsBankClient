@@ -21,7 +21,7 @@
                             [dropSpecialCharacters]="true" mask="000.000.000-00" [(ngModel)]="targetAccount.cpf">
                     </div>
                     <div class="input-field">
-                        <input placeholder="Valor" required type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
+                        <input placeholder="Valor" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" required type="text" name="amount" id="amount" [(ngModel)]="transaction.amount">
                     </div>
                     <button class="btn btn-gringotts waves-effect waves-light" type="text" (click)="createTransaction(); transferForm.reset()"
                         [disabled]="!(transaction.targetAccountNumber &&

@@ -29,6 +29,7 @@ import { SliderDirective } from './directive/slider.directive';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { MatStepperModule } from '@angular/material/stepper';
+import { CurrencyMaskModule } from 'ngx-currency-mask';
 
 
 registerLocaleData(localePt);
@@ -60,6 +61,7 @@ registerLocaleData(localePt);
     MatTabsModule,
     MatStepperModule,
     CommonModule,
+    CurrencyMaskModule,
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot()
   ],

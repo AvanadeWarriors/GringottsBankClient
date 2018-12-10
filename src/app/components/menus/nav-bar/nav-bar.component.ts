@@ -1,5 +1,6 @@
 import { LoginService } from './../../../services/login/login.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,9 @@ export class NavBarComponent implements OnInit {
 
   usuarioLogado = false;
 
-  constructor(private loginService: LoginService) { }
+  constructor(
+    private router: Router,
+    private loginService: LoginService) { }
 
   ngOnInit() {
     this.isLogged();
@@ -18,6 +21,15 @@ export class NavBarComponent implements OnInit {
   }
 
   isLogged() {
-    this.usuarioLogado  = this.loginService.isLoggedIn();
+    this.usuarioLogado = this.loginService.isLoggedIn();
+  }
+
+  redirectTo(location: string) {
+    this.router.navigateByUrl(location);
+  }
+
+  logout() {
+    this.loginService.logout();
+    this.redirectTo('/home');
   }
 }
