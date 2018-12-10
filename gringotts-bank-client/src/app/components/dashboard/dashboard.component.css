@@ -53,6 +53,11 @@ label{
 
 .floatR{
     float: right;
+    color: #3b3a40 !important;
+}
+
+.floatR:hover{
+    color:rgb(249,212,35) !important;
 }
 
 .img-area {
