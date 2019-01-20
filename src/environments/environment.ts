@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  URL_API: 'https://api-gringottsbanks.ddns.net'
-  // URL_API: 'http://localhost:3000'
+  URL_API: 'http://localhost:3000'
 };
 
 
